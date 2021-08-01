@@ -1,0 +1,30 @@
+{
+  "login" : {
+    "titulo": "Please Enter Your Information",
+    "recordar": "Remember Me",
+    "usuario": "Username",
+    "password": "Password",
+    "login": "Login",
+    "oIngresar": "Or Login Using",
+    "registrarse": "I want to register"
+
+  },
+  "registroU": {
+    "titulo": "New user registration",
+    "titulo_datos": "Enter your details to begin",
+    "email": "Email",
+    "usuario": "UserName",
+    "password": "Password",
+    "repetir": "Repeat password",
+    "aceptar": "I Accept the",
+    "terminos": "User Agreement",
+    "reset": "Reset",
+    "registrar": "Register",
+    "regresar": "Back to login"
+  },
+  "pageNF": {
+    "titulo": "Page Not Found",
+    "descripcion":"We looked everywhere but we couldn't find it!"
+  }
+
+}

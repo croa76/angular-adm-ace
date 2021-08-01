@@ -1,0 +1,28 @@
+{
+  "login" : {
+    "titulo": "Introduzca su información",
+    "recordar": "Recordar",
+    "usuario": "Usuario",
+    "password": "Contraseña",
+    "login": "Ingresar",
+    "oIngresar": "O ingresar utilizando",
+    "registrarse": "Quiero registrarme"
+  },
+  "registroU": {
+    "titulo": "Registro de nuevo usuario",
+    "titulo_datos": "Ingrese sus datos para comenzar",
+    "email": "Correo electrónico",
+    "usuario": "Usuario",
+    "password": "Contraseña",
+    "repetir": "Repetir contraseña",
+    "aceptar": "Acepto los",
+    "terminos": "Términos de Uso",
+    "reset": "Limpiar",
+    "registrar": "Registrar",
+    "regresar": "Regresar a login"
+  },
+  "pageNF": {
+    "titulo": "Página no localizada",
+    "descripcion":"¡La buscamos por todos lados, pero no pudimos encontrarla!"
+  }
+}

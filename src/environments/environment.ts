@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  nombreProd: 'Softevo Web',
+  versionProd: 'v.0.1'
 };
 
 /*
