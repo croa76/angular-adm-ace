@@ -26,18 +26,22 @@
 
                     <div class="space-6"></div>
 
-                    <form>
+                    <form autocomplete="off"
+                      [formGroup]="formLogin"
+                      (ngSubmit)="login()">
                       <fieldset>
                         <label class="block clearfix">
                           <span class="block input-icon input-icon-right">
-                            <input type="text" class="form-control" placeholder="{{'login.usuario'|translate}}" />
+                            <input type="email" formControlName="email" class="form-control"
+                                  placeholder="{{'login.usuario'|translate}}" />
                             <i class="ace-icon fa fa-user"></i>
                           </span>
                         </label>
 
                         <label class="block clearfix">
                           <span class="block input-icon input-icon-right">
-                            <input type="password" class="form-control" placeholder="{{'login.password'|translate}}" />
+                            <input type="password" formControlName="password" class="form-control"
+                            placeholder="{{'login.password'|translate}}" />
                             <i class="ace-icon fa fa-lock"></i>
                           </span>
                         </label>
@@ -46,11 +50,11 @@
 
                         <div class="clearfix">
                           <label class="inline">
-                            <input type="checkbox" class="ace" />
+                            <input formControlName="remember" type="checkbox" class="ace" />
                             <span class="lbl"> {{'login.recordar'|translate}}</span>
                           </label>
 
-                          <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                          <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
                             <i class="ace-icon fa fa-key"></i>
                             <span class="bigger-110">{{'login.login'|translate}}</span>
                           </button>
@@ -67,17 +71,7 @@
                     <div class="space-6"></div>
 
                     <div class="social-login center">
-                      <a class="btn btn-primary">
-                        <i class="ace-icon fa fa-facebook"></i>
-                      </a>
-
-                      <a class="btn btn-info">
-                        <i class="ace-icon fa fa-twitter"></i>
-                      </a>
-
-                      <a class="btn btn-danger">
-                        <i class="ace-icon fa fa-google-plus"></i>
-                      </a>
+                      <div id="my-signin2"></div>
                     </div>
                   </div><!-- /.widget-main -->
 
@@ -90,7 +84,7 @@
                     </div>
 
                     <div>
-                      <a href="/register" data-target="#signup-box" class="user-signup-link">
+                      <a  style="cursor:pointer" routerLink="/register" class="user-signup-link">
                         {{'login.registrarse'|translate}}
                         <i class="ace-icon fa fa-arrow-right"></i>
                       </a>

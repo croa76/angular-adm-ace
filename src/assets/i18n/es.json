@@ -19,7 +19,11 @@
     "terminos": "Términos de Uso",
     "reset": "Limpiar",
     "registrar": "Registrar",
-    "regresar": "Regresar a login"
+    "regresar": "Regresar a login",
+    "validaNombre": "El nombre es obligatorio con mínimo de 3 caracteres",
+    "validaEMail": "El email es obligatorio y tiene que ser válido",
+    "validaPassword": "Las contraseñas deben ser iguales",
+    "validaTerminos": "Debe aceptar los términos de uso"
   },
   "pageNF": {
     "titulo": "Página no localizada",

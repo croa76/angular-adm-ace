@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   nombreProd: 'Softevo Web',
-  versionProd: 'v.0.1'
+  versionProd: 'v.0.1',
+  base_ur: 'http://localhost:3000/api'
 };
 
 /*

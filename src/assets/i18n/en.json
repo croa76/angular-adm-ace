@@ -20,7 +20,11 @@
     "terminos": "User Agreement",
     "reset": "Reset",
     "registrar": "Register",
-    "regresar": "Back to login"
+    "regresar": "Back to login",
+    "validaNombre": "Name is required and must have at least 3 characters long",
+    "validaEMail": "Email is required and valid",
+    "validaPassword": "Passwords must be equal",
+    "validaTerminos": "You must accept the terms"
   },
   "pageNF": {
     "titulo": "Page Not Found",

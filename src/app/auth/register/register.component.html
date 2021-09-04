@@ -28,43 +28,55 @@
                     <div class="space-6"></div>
                     <p> {{'registroU.titulo_datos'|translate}} </p>
 
-                    <form>
+                    <form (ngSubmit)="crearUsuario()"
+                          autocomplete="off"
+                          [formGroup]="formRegister">
                       <fieldset>
                         <label class="block clearfix">
                           <span class="block input-icon input-icon-right">
-                            <input type="email" class="form-control" placeholder="{{'registroU.email'|translate}}" />
+                            <input type="email" class="form-control" formControlName="email" placeholder="{{'registroU.email'|translate}}" />
                             <i class="ace-icon fa fa-envelope"></i>
                           </span>
                         </label>
 
                         <label class="block clearfix">
                           <span class="block input-icon input-icon-right">
-                            <input type="text" class="form-control" placeholder="{{'registroU.usuario'|translate}}" />
+                            <input type="text" formControlName="nombre"  class="form-control" placeholder="{{'registroU.usuario'|translate}}" />
                             <i class="ace-icon fa fa-user"></i>
                           </span>
                         </label>
 
                         <label class="block clearfix">
                           <span class="block input-icon input-icon-right">
-                            <input type="password" class="form-control" placeholder="{{'registroU.password'|translate}}" />
+                            <input type="password" class="form-control" formControlName="password" placeholder="{{'registroU.password'|translate}}" />
                             <i class="ace-icon fa fa-lock"></i>
                           </span>
                         </label>
 
                         <label class="block clearfix">
                           <span class="block input-icon input-icon-right">
-                            <input type="password" class="form-control" placeholder="{{'registroU.repetir'|translate}}" />
+                            <input type="password" class="form-control" formControlName="password2" placeholder="{{'registroU.repetir'|translate}}" />
                             <i class="ace-icon fa fa-retweet"></i>
                           </span>
                         </label>
 
                         <label class="block">
-                          <input type="checkbox" class="ace" />
+                          <input type="checkbox" class="ace" formControlName="terminos"/>
                           <span class="lbl">
                             {{'registroU.aceptar'|translate}}
                             <a href="#">{{'registroU.terminos'|translate}}</a>
                           </span>
                         </label>
+
+
+                        <div class="row" class="block clearfix">
+                          <div class="col text-danger">
+                            <p *ngIf="!campoValido('nombre')" >* {{'registroU.validaNombre'|translate}}</p>
+                            <p *ngIf="!campoValido('email')">*   {{'registroU.validaEMail'|translate}}</p>
+                            <p *ngIf="!contraseniasValidas()">* {{'registroU.validaPassword'|translate}}</p>
+                            <p *ngIf="!campoValido('terminos')">* {{'registroU.validaTerminos'|translate}}</p>
+                          </div>
+                        </div>
 
                         <div class="space-24"></div>
 
@@ -74,7 +86,7 @@
                             <span class="bigger-110">{{'registroU.reset'|translate}}</span>
                           </button>
 
-                          <button type="button" class="width-65 pull-right btn btn-sm btn-success">
+                          <button type="button" type="submit" class="width-65 pull-right btn btn-sm btn-success">
                             <span class="bigger-110">{{'registroU.registrar'|translate}}</span>
 
                             <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
@@ -85,7 +97,7 @@
                   </div>
 
                   <div class="toolbar center">
-                    <a href="/login" data-target="#login-box" class="back-to-login-link">
+                    <a routerLink="/login" data-target="#login-box" class="back-to-login-link">
                       <i class="ace-icon fa fa-arrow-left"></i>
                       {{'registroU.regresar'|translate}}
                     </a>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { UsuarioService } from '../../services/usuario.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -14,9 +16,15 @@ export class HeaderComponent implements OnInit {
     // version: string = 'web v. 0.1';
 
 
-  constructor() { }
+  constructor(private usuarioSrv: UsuarioService,
+              private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  logout(){
+    this.usuarioSrv.logout();
+    this.router.navigateByUrl('/login');
   }
 
 }
